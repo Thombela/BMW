@@ -1,0 +1,63 @@
+@import './constants.scss';
+
+#header{
+    background: #000000b3;
+    padding: 20px;
+    position: sticky;
+    width: 100%;
+
+    .left{
+        margin-right: 20px;
+        max-width: 200px;
+
+        img{
+            max-width: 50px;
+        }
+        h1{
+            color: #fff;
+        }
+    }
+    .right{
+
+        .menu{
+            justify-content: end;
+            height: 100%;
+            display: flex;;
+            align-items: center;
+
+            .item{
+                margin-right: 10px;
+
+                h5{
+                    color: #fff
+                };
+            }
+        }
+        .fa-bars-staggered{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #header{
+        .right{
+            .menu{
+                display: none;
+
+                &.toggled{
+                    display: block;
+                }
+            }
+            .fa-bars-staggered{
+                display: block;
+                height: 20px;
+                color: #fff;
+
+                &.toggled{
+                    display: none;
+                }
+            }
+        }
+    }
+}

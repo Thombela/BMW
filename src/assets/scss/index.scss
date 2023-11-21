@@ -1,0 +1,39 @@
+@import './constants.scss';
+
+#index{
+    .welcome-image{
+        position: relative;
+
+        img{
+            width: 100%;
+        }
+
+        h1{
+            color: #fff;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 100px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        h2{
+            color: #fff;
+            position: absolute;
+            top: 130px;
+            left: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    }
+    .gallery{
+        background: #fff;
+        padding: 20px;
+
+        .car{
+            max-width: 150px;
+
+            img{
+                max-height: 100px;
+            }
+        }
+    }
+}
