@@ -1,56 +1,23 @@
 import React, { useState } from 'react'
-import Header from './assets/sharedComponents/header.jsx'
-import Footer from './assets/sharedComponents/footer.jsx'
-import './assets/scss/index.scss'
-import { Col, Row } from 'react-bootstrap'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Index from './assets/pages/Index.jsx'
+import About from './assets/pages/About.jsx'
+import Cars from './assets/pages/Cars.jsx'
+import Gallery from './assets/pages/Gallery.jsx'
+import Contact from './assets/pages/Contact.jsx'
 
 export default function App() {
   return (
-    <div id="index" >
-      <Header  />
-      <div className="welcome-image">
-        <img src='./src/assets/gallery/m3-all.jpg' />
-        <h1>
-          German Engineering
-        </h1>
-        <h2>
-          Where perfect driving meets perfect engineering.
-        </h2>
-      </div>
-      <div className="gallery">
-        <Row>
-          <Col>
-            <div className="car">
-              <img src='./src/assets/gallery/i8.webp'/>
-            </div></Col>
-          <Col>
-        <div className="car">
-          <img src='./src/assets/gallery/m3-g80.jpg'/>
-        </div>
-        </Col>
-          <Col>
-        <div className="car">
-          <img src='./src/assets/gallery/m4-csl.webp'/>
-        </div>
-        </Col>
-          <Col>
-        <div className="car">
-          <img src='./src/assets/gallery/x5.webp'/>
-        </div>
-        </Col>
-          <Col>
-        <div className="car">
-          <img src='./src/assets/gallery/z4.jpg'/>
-        </div>
-        </Col>
-          <Col>
-        <div className="car">
-          <img src='./src/assets/gallery/m5cs-1.jpg'/>
-        </div>
-        </Col>
-        </Row>
-      </div>
-      <Footer />
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Index />}></Route>
+          <Route path='/About' element={<About />}></Route>
+          <Route path='/Cars' element={<Cars />}></Route>
+          <Route path='/Gallery' element={<Gallery />}></Route>
+          <Route path='/Contact' element={<Contact />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }

@@ -27,12 +27,20 @@
     .gallery{
         background: #fff;
         padding: 20px;
+        &:nth-child(n+2){
+            border: 2px solid red;
+        }
+
 
         .car{
-            max-width: 150px;
+            min-width: 200px;
 
             img{
                 max-height: 100px;
+
+                &:not(.i8){
+                    max-height: 200px;
+                }
             }
         }
     }
