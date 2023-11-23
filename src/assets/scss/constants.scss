@@ -1,3 +1,42 @@
 @import './colours.scss';
 @import './reset.scss';
 
+@mixin button($colour, $textColour, $hoverColour, $textHoverColour){
+    border-radius: 0px;
+    margin: 0px;
+    padding: 15px;
+    height: 50px;
+    border: 0px;
+    background: $colour;
+    color: $textColour;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $hoverColour;
+        color: $textHoverColour;
+    }
+}
+@mixin border-button($colour, $textColour, $hoverColour, $textHoverColour){
+    margin: 0px;
+    padding: 15px;
+    height: 50px;
+    border: 1px solid $colour;
+    background: transparent;
+    color: $textColour;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+
+    &:hover{
+        background-color: transparent;
+        border: 1px solid $hoverColour;
+        color: $textHoverColour;
+    }
+}
+
+.button{
+    @include button(#fff, #000, #ff0000, #fff);
+}
+.red-button{
+    @include border-button(#fff, #fff, #ff0000, #ff0000);
+}
