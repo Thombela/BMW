@@ -37,6 +37,12 @@
 .button{
     @include button(#fff, #000, #ff0000, #fff);
 }
+.blue-button{
+    @include button(#007bff, #fff, #3496ff, #fff);
+}
+.blue-border-button{
+    @include border-button(#007bff, #007bff, #007bff, #007bff);
+}
 .red-button{
     @include border-button(#fff, #fff, #ff0000, #ff0000);
 }

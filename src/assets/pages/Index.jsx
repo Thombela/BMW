@@ -5,8 +5,10 @@ import '../scss/index.scss'
 import { Col, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router-dom'
 
 export default function Index() {
+  const navigate = useNavigate()
   return (
     <div id="index" >
       <Header  />
@@ -45,7 +47,7 @@ export default function Index() {
                   <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                   Build Your Own
                 </div>
-                <div className="red-button">
+                <div className="red-button" onClick={() => navigate('/Modals/M3')}>
                   <FontAwesomeIcon icon={faChevronRight} />
                   All Models
                 </div>
@@ -111,7 +113,7 @@ export default function Index() {
                   <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                   Build Your Own
                 </div>
-                <div className="red-button">
+                <div className="red-button" onClick={() => navigate('/Modals/M5')}>
                   <FontAwesomeIcon icon={faChevronRight} />
                   All Models
                 </div>

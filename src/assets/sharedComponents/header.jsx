@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Dropdown, Row } from 'react-bootstrap'
 import '../scss/header.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBarsStaggered, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faBarsStaggered, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom'
 
 export default function header( {count} ) {
   const navigate = useNavigate()
 
-  const [refresh, setRefresh] = useState(0)
+  const [state, setState] = useState(false)
   const [toggleMenu, setToggleMenu] = useState(false)
+
 
   return (
     <>
@@ -29,7 +30,26 @@ export default function header( {count} ) {
                     </Row>
                   </Col>
                   <Col className='right'>
-                  <div className={'menu '+(toggleMenu?'toggled':'')}>
+                    <Dropdown>
+                      <Dropdown.Toggle onClick={() => setState(!state)}>
+                        <FontAwesomeIcon icon={faBars} />
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        <Dropdown.Item href='/About'>
+                          About Us
+                        </Dropdown.Item>
+                        <Dropdown.Item>
+                          Cars
+                        </Dropdown.Item>
+                        <Dropdown.Item>
+                          Gallery
+                        </Dropdown.Item>
+                        <Dropdown.Item>
+                          Contact Us
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  {/*<div className={'menu '+(toggleMenu?'toggled':'')}>
                     <div className="item">
                       <h5 onClick={() => navigate('/About')}>About Us</h5>
                     </div>
@@ -42,7 +62,7 @@ export default function header( {count} ) {
                     <div className="item">
                       <h5 onClick={() => navigate('/Contact')}>Contact Us</h5>
                     </div>
-                  </div>
+  </div>*/}
                   <FontAwesomeIcon icon={toggleMenu?faXmark:faBarsStaggered} onClick={() => setToggleMenu(!toggleMenu)} />
                   </Col>
               </Row>
