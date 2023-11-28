@@ -20,7 +20,7 @@ export default function header( {count} ) {
                   <Col className='left'>
                     <Row>
                       <Col>
-                        <img src='src/assets/gallery/logo.svg' onClick={() => navigate('/')} />
+                        <img src='../src/assets/gallery/logo.svg' onClick={() => navigate('/')} />
                       </Col>
                       <Col>
                         <h1>

@@ -5,8 +5,8 @@ import About from './assets/pages/About.jsx'
 import Cars from './assets/pages/Cars.jsx'
 import Gallery from './assets/pages/Gallery.jsx'
 import Contact from './assets/pages/Contact.jsx'
-import Modals from './assets/pages/Modals.jsx'
-import Modal from './assets/pages/Modal.jsx'
+import Models from './assets/pages/Models.jsx'
+import Model from './assets/pages/Model.jsx'
 
 export default function App() {
   return (
@@ -18,8 +18,8 @@ export default function App() {
           <Route path='/Cars' element={<Cars />}></Route>
           <Route path='/Gallery' element={<Gallery />}></Route>
           <Route path='/Contact' element={<Contact />}></Route>
-          <Route path='/Modals/:modal' element={<Modals />}></Route>
-          <Route path='/Modal/:car' element={<Modal />}></Route>
+          <Route path='/Models/:model' element={<Models />}></Route>
+          <Route path='/Model/:car' element={<Model />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

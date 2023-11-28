@@ -47,7 +47,7 @@ export default function Index() {
                   <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                   Build Your Own
                 </div>
-                <div className="red-button" onClick={() => navigate('/Modals/M3')}>
+                <div className="red-button" onClick={() => navigate('/Models/M3')}>
                   <FontAwesomeIcon icon={faChevronRight} />
                   All Models
                 </div>
@@ -113,7 +113,7 @@ export default function Index() {
                   <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                   Build Your Own
                 </div>
-                <div className="red-button" onClick={() => navigate('/Modals/M5')}>
+                <div className="red-button" onClick={() => navigate('/Models/M5')}>
                   <FontAwesomeIcon icon={faChevronRight} />
                   All Models
                 </div>
