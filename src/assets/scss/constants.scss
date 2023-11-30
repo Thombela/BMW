@@ -33,6 +33,12 @@
         color: $textHoverColour;
     }
 }
+@mixin avatar ($dimension){
+    height: $dimension;
+    width: $dimension;
+    border-radius: calc($dimension / 2);
+    border: 0px;
+}
 
 .button{
     @include button(#fff, #000, #ff0000, #fff);
@@ -45,4 +51,19 @@
 }
 .red-button{
     @include border-button(#fff, #fff, #ff0000, #ff0000);
+}
+.avatar-xs{
+    @include avatar(30px)
+}
+.avatar-sm{
+    @include avatar(50px)
+}
+.avatar-md{
+    @include avatar(80px)
+}
+.avatar-lg{
+    @include avatar(100px)
+}
+.avatar-xl{
+    @include avatar(150px)
 }

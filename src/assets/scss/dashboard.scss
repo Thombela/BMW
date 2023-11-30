@@ -1,0 +1,17 @@
+@import './constants.scss';
+
+#dashboard{
+    .profile{
+        padding: 20px;
+        background: #fff;
+
+        img{
+
+        }
+        .row{
+            .col:nth-child(2){
+                max-width: 350px;
+            }
+        }
+    }
+}

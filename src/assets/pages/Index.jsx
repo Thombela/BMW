@@ -25,7 +25,7 @@ export default function Index() {
         <Row>
           <Col>
             <div className="car">
-              <h4>i8</h4>
+              <h4><FontAwesomeIcon icon={faChevronRight} />i8</h4>
               <img src='./src/assets/gallery/i8.webp' className='i8'/>
               <div className="parent-buttons">
                 <div className="button">
@@ -40,7 +40,7 @@ export default function Index() {
             </div></Col>
           <Col>
             <div className="car">
-              <h4>m3 G80</h4>
+              <h4><FontAwesomeIcon icon={faChevronRight} />m3 G80</h4>
               <img src='./src/assets/gallery/m3-g80.jpg'/>
               <div className="parent-buttons">
                 <div className="button">
@@ -56,7 +56,7 @@ export default function Index() {
           </Col>
             <Col>
             <div className="car">
-              <h4>M4 CSL</h4>
+              <h4><FontAwesomeIcon icon={faChevronRight} />M4 CSL</h4>
               <img src='./src/assets/gallery/m4-csl.webp'/>
               <div className="parent-buttons">
                 <div className="button">
@@ -70,11 +70,9 @@ export default function Index() {
               </div>
             </div>
           </Col>
-        </Row>
-        <Row>
             <Col>
             <div className="car">
-              <h4>X5</h4>
+              <h4><FontAwesomeIcon icon={faChevronRight} />X5</h4>
               <img src='./src/assets/gallery/x5.webp'/>
               <div className="parent-buttons">
                 <div className="button">
@@ -90,7 +88,7 @@ export default function Index() {
           </Col>
               <Col>
             <div className="car">
-              <h4>Z4</h4>
+              <h4><FontAwesomeIcon icon={faChevronRight} />Z4</h4>
               <img src='./src/assets/gallery/z4.jpg'/>
               <div className="parent-buttons">
                 <div className="button">
@@ -106,7 +104,7 @@ export default function Index() {
           </Col>
             <Col>
             <div className="car">
-              <h4>M5 Cs</h4>
+              <h4><FontAwesomeIcon icon={faChevronRight} />M5 Cs</h4>
               <img src='./src/assets/gallery/m5cs-1.jpg'/>
               <div className="parent-buttons">
                 <div className="button">

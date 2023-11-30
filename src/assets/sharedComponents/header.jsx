@@ -31,7 +31,7 @@ export default function header( {count} ) {
                   </Col>
                   <Col className='right'>
                     <Dropdown>
-                      <Dropdown.Toggle onClick={() => setState(!state)}>
+                      <Dropdown.Toggle>
                         <FontAwesomeIcon icon={faBars} />
                       </Dropdown.Toggle>
                       <Dropdown.Menu>
@@ -46,6 +46,9 @@ export default function header( {count} ) {
                         </Dropdown.Item>
                         <Dropdown.Item>
                           Contact Us
+                        </Dropdown.Item>
+                        <Dropdown.Item href='/SignIn'>
+                          Sign In
                         </Dropdown.Item>
                       </Dropdown.Menu>
                     </Dropdown>
@@ -63,7 +66,6 @@ export default function header( {count} ) {
                       <h5 onClick={() => navigate('/Contact')}>Contact Us</h5>
                     </div>
   </div>*/}
-                  <FontAwesomeIcon icon={toggleMenu?faXmark:faBarsStaggered} onClick={() => setToggleMenu(!toggleMenu)} />
                   </Col>
               </Row>
           </Container>

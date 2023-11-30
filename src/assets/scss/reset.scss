@@ -92,8 +92,13 @@ img{
 .dropdown-toggle:hover,
 .dropdown-toggle:focus,
 .dropdown-toggle:active,
-.dropdown-toggle:checked{
-  background: transparent;
+.dropdown-toggle:checked,
+.dropdown-toggle.btn-primary,
+.dropdown-toggle.btn-primary:hover,
+.dropdown-toggle.btn-primary:focus,
+.dropdown-toggle.btn-primary:active,
+.dropdown-toggle.btn-primary:checked{
+  background: transparent!important;
   border: none;
   color: inherit;
 }
