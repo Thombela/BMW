@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../sharedComponents/footer'
 import '../scss/signin.scss'
 import { Modal } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import { useUserData } from '../Data/session'
+import { get } from '../../functions'
 
 export default function SignIn() {
     const { userData, setUserData } = useUserData()
@@ -13,22 +14,6 @@ export default function SignIn() {
         password: '',
         success: ''
     })
-    const signIn = ([{
-        email: 'abcd@example.com',
-        name: 'Jonathan',
-        profile_photo: 'ichigo.webp',
-        password: 12345678
-    },{
-        email: '1234@example.com',
-        name: 'Kabelo',
-        profile_photo: 'kiyotaka.jpg',
-        password: 'abcdefgh'
-    },{
-        email: '1a2b@example.com',
-        name: 'Trevor',
-        profile_photo: 'sasuke.png',
-        password: '3c4d5e6f'
-    },])
     const handleInput = (event) => {
       const { name, value } = event.target
       setSignInData({
@@ -38,7 +23,38 @@ export default function SignIn() {
     }
     const submitForm = (event) => {
         event.preventDefault()
-        const user = signIn.find(users => users.email == signInData.email)
+        const data = {
+            LoginUser: 1,
+            email: signInData.email,
+            password: signInData.password
+        }
+        get(data).then(response => {
+            console.log(response)
+            if(response.message == 'Success'){
+                setSignInData({
+                    ...signInData,
+                    success: 'success'
+                })
+                setUserData({
+                    ...userData,
+                    email: response.email,
+                    name: response.name,
+                    profile_photo: response.profile_photo,
+                    cars: response.cars
+                })
+                localStorage.setItem('email', signInData.email)
+                setTimeout(() => {
+                    navigate('/Dashboard')
+                }, 1000);
+            }
+            else{
+                setSignInData({
+                    ...signInData,
+                    success: 'error'
+                })
+            }
+        })
+        /*const user = signIn.find(users => users.email == signInData.email)
         if(!user){
             setSignInData({
                 ...signInData,
@@ -60,7 +76,7 @@ export default function SignIn() {
             setTimeout(() => {
                 navigate('/Dashboard')
             }, 1000);
-        }
+        }*/
     }
   return (
     <div id='signin'>
